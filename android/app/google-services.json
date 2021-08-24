@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "29738620419",
+    "project_id": "react-nativequiz",
+    "storage_bucket": "react-nativequiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29738620419:android:0a5d7424b61d6e4c716036",
+        "android_client_info": {
+          "package_name": "com.awesomeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29738620419-m39cftk2cediceitjvt44thi9il3ejkd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB53syTdUsXiqiDSfHIIbuaTTQgSbT-FLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29738620419-m39cftk2cediceitjvt44thi9il3ejkd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
