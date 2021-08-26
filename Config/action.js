@@ -3,7 +3,7 @@ import database from '@react-native-firebase/database';
 const signUp = (data,navigation)=> {
     return auth().createUserWithEmailAndPassword(data.email,data.password)
     .then(()=> {
-        navigation.navigate('Quiz');
+        navigation.navigate('Home');
         console.log(data.email)
         var email = data.email
         database().ref(`/users/`).push(data);
@@ -11,7 +11,7 @@ const signUp = (data,navigation)=> {
 }
 
 const logIn = ({email,password},navigation)=> {
-    return auth().signInWithEmailAndPassword(email,password).then(()=> navigation.navigate('Quiz')).catch((e)=> alert('Something went wrong'))
+    return auth().signInWithEmailAndPassword(email,password).then(()=> navigation.navigate('Home')).catch((e)=> alert('Something went wrong'))
 }
 
 const signOut = ()=>{

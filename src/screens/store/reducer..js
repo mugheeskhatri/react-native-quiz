@@ -7,11 +7,11 @@ const INITIAL_STATE = {
 {
     question:'What is the Arabic term used for the ‘interpretation of the Qur’an’?',
     answer:["Tafseer","Tatbeeq","Tahqeeq","Taid"],
-    correct:'TafseTafseerer',
+    correct:'Tafseer',
 },
 {
     question:'Which Surah of the Qur’an contains orders for the change of Qiblah direction to face while praying?',
-    answer:["Surah Ikhlas","Surah Kauthar","Quraish","Surah Baqarah"],
+    answer:["Surah Ikhlas","Surah Kauthar","Quraish","Al Baqarah"],
     correct:'Al Baqarah',
 },
 {

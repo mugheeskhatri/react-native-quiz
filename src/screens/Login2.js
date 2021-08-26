@@ -13,10 +13,9 @@ function Login2({navigation}){
     return(
         <View style={{flex:1,backgroundColor:'#FCA82F'}}>
             <View style={{flex:1 ,justifyContent:'center', backgroundColor:'#6066D0' , alignItems:'center'}}>
-            <View style={{width:"85%",backgroundColor:'white',height:600}}>
-                <View style={{backgroundColor:'#FCA82F',width:'35%',padding:20,alignItems:'center',justifyContent:'center',marginTop:20,borderTopEndRadius:35,borderBottomEndRadius:35}}><Text style={{fontSize:20,fontWeight:'bold'}}>Log In</Text></View>
-               <View style={{width:'100%',alignItems:'center'}}>
-               <View style={{marginTop:20,width:"100%",alignItems:'center'}}>
+            <View style={{width:"85%",backgroundColor:'white',height:600,alignItems:'center'}}>
+                <Text style={{color:'black',fontSize:36,fontWeight:'bold',marginTop:15}}>Log In</Text>
+                <View style={{marginTop:20,width:"100%",alignItems:'center'}}>
                 <TextInput onChangeText={(e) => setEmail(e)} keyboardType="email-address" style={style.input} placeholder="Enter username or email" />
  <TextInput onChangeText={(e) => setPassword(e)} secureTextEntry={true} style={style.input} placeholder="Enter password" />
  <TouchableOpacity onPress={()=> work()} style={style.btn}>
@@ -36,11 +35,10 @@ function Login2({navigation}){
 <Text style={{color:'#134c70',fontSize:13,marginLeft:14}}>Continue with Facebook</Text>
 </TouchableOpacity>
 </View>
-<TouchableOpacity style={{marginTop:20}} onPress={()=> navigation.navigate('SignUp')}>          
+<TouchableOpacity style={{marginTop:40}} onPress={()=> navigation.navigate('SignUp')}>          
   <Text style={{fontSize:16,color:'#6066D0'}}>Don't have an account?</Text>
 </TouchableOpacity> 
                 </View>
-               </View>
             </View>
             </View>
            

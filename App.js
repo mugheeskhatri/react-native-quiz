@@ -4,33 +4,56 @@ import TabNavigation from './navigation/TabNavigation';
 import { Provider } from 'react-redux';
 import Camera from './src/screens/Camera';
 import store from './src/screens/store';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+
 import { TouchableOpacity, View ,Text, Image } from 'react-native';
 // import DrawerNavigation from './navigation/Drawer';
 function App(){
-  const [camera, setCamera] = useState(false);
-  const [flip , setFlip] = useState(false);
-  const [uri , setUri] = useState('')
   return(
     <Provider store={store}>
-      {/* <Appnavigation /> */}
+      <Appnavigation />
       {/* <TabNavigation /> */}
       {/* <DrawerNavigation /> */}
-      <View style={{flex:1}} >
+      {/* <View style={{flex:1}} >
        <View style={{flex:1}}>
-       <TouchableOpacity>
-          <Text onPress={()=>setCamera(true)}>Open Camera</Text>
+       <TouchableOpacity style={{borderWidth:1,padding:10,width:"40%",marginTop:20}} onPress={()=>{ 
+           const option={
+              mediaType:'photo',
+              includeBase64:true
+            }
+            launchCamera(option,(response)=>{
+              if (response.didCancel) {
+                console.log('User cancelled image picker');
+              } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+              } else if (response.customButton) {
+                console.log('User tapped custom button: ', response.customButton);
+              } else {
+                console.log(response.assets[0].uri)
+            }})
+          } }>
+          <Text >Open Camera</Text>
         </TouchableOpacity>
-       <View style={{marginTop:30}}>
-       <TouchableOpacity>
-          <Text onPress={()=>setFlip(!flip)}>Flip Camera</Text>
+        <TouchableOpacity style={{borderWidth:1,padding:10,width:"40%",marginTop:20}} onPress={()=>{ 
+           const option={
+              mediaType:'photo',
+              includeBase64:true
+            }
+            launchImageLibrary(option,(response)=>{
+              if (response.didCancel) {
+                console.log('User cancelled image picker');
+              } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+              } else if (response.customButton) {
+                console.log('User tapped custom button: ', response.customButton);
+              } else {
+                console.log(response.assets[0].uri)
+            }})
+          } }>
+          <Text >Open Gallery</Text>
         </TouchableOpacity>
        </View>
-       </View>
-        <View>
-        {camera ? <Camera flip={flip}/> : null}
-        </View>
-        {uri ? <View><Image source={{uri:uri}} style={{width:400,height:600}} /></View> : null}
-      </View>
+      </View> */}
       
     </Provider>
   )
